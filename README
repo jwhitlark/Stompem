@@ -1,0 +1,17 @@
+stompem.el -- Connect and send messages via STOMP (Streaming Text Orientated Messaging Protocol)
+
+This is version 0.8 of 22 Jun 2010
+
+
+TODO: Transaction support
+TODO: Prompt to connect on send-* if no connection exists.
+TODO: Automatically add content-length header to messages.
+TODO: Add config option for common queues, then merge with dest-hist
+TODO: Add filters on output to allow subscriptions to different
+      queues to put messages in different buffers.  see 37.9.2 "Process Filter Functions" in elisp manual.
+
+Recommended autoload statements (add the following to your .emacs file.)
+(autoload 'stompem-connect "stompem" "Connect to a Stomp server in order to send/receive messages." t)
+
+You can override stompem-host, stompem-port, stompem-user, and stompem-pass in your .emacs file
+Additionally, you can define stompem-destination-history to provide a starting list of queues.
